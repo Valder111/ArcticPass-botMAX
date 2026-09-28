@@ -1,0 +1,17 @@
+.env
+.env.local
+.env.*.local
+!.env.example
+
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+/tmp/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
