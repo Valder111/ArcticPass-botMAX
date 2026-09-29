@@ -1,0 +1,15 @@
+services:
+  bot:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    image: arcticpass-max-bot:local
+    container_name: arcticpass-max-bot
+    restart: unless-stopped
+    environment:
+      MAX_TOKEN: ${MAX_TOKEN:?задайте MAX_TOKEN в .env}
+      BASE_URL: ${BASE_URL:?задайте BASE_URL в .env}
+      MAX_MINIAPP_WEB_APP: ${MAX_MINIAPP_WEB_APP:-}
+      MAX_MINIAPP_START_PARAM: ${MAX_MINIAPP_START_PARAM:-}
+      MAX_CA_CERT: ${MAX_CA_CERT:-}
+      MAX_TLS_INSECURE: ${MAX_TLS_INSECURE:-}
